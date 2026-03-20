@@ -1,15 +1,3 @@
-"""
-commodities_etl.py
-==================
-Extracción diaria de precios de Soja, Maíz y Trigo desde Yahoo Finance.
-Calcula KPIs y guarda un CSV por commodity.
-
-Pensado para correr con Windows Task Scheduler una vez por día.
-
-Dependencias:
-    pip install yfinance pandas
-"""
-
 import yfinance as yf
 import pandas as pd
 import os
