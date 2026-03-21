@@ -6,9 +6,15 @@ Dashboard de precios de commodities agrícolas con actualización automática di
 
 ---
 
-## ¿Qué hace este proyecto?
+## Qué hace este proyecto?
 
 Un script de Python extrae precios de mercado de Soja, Maíz y Trigo desde Yahoo Finance todos los días hábiles a las 10:00 AM (Argentina). Los datos se procesan, se calculan KPIs clave y se almacenan como CSV en este repositorio. Power BI lee esos archivos y actualiza el dashboard automáticamente.
+
+## Para quién está dirigido este dashboard?
+
+Este dashboard está orientado a productores agropecuarios, acopiadores del sector agroindustrial que necesitan monitorear diariamente la evolución de los precios de commodities como soja, maíz y trigo.
+El objetivo es proporcionar una visión clara y resumida del mercado que facilite la toma de decisiones, como definir momentos de venta, evaluar si conviene esperar o anticipar movimientos.
+A diferencia de herramientas más técnicas, este dashboard prioriza indicadores simples que permiten interpretar rápidamente tres dimensiones clave del mercado: nivel de precios, tendencia y volatilidad.
 
 ## KPIs calculados
 
@@ -36,14 +42,14 @@ commodities-dashboard/
 │
 ├── .github/
 │   └── workflows/
-│       └── actualizar_datos.yml   ← pipeline de automatización
+│       └── actualizar_datos.yml   pipeline de automatización
 │
 ├── data/
 │   ├── soja.csv
 │   ├── maiz.csv
 │   └── trigo.csv
 │
-├── commodities_etl.py             ← script principal
+├── commodities_etl.py              script principal
 ├── requirements.txt
 └── README.md
 ```
