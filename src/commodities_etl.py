@@ -118,7 +118,7 @@ def main():
                 ultima_existente = existente.index.max()
                 ultima_nueva = df_nuevo.index.max()
 
-                # 🧠 OPCIÓN 1 → validación
+                # OPCIÓN 1 validación
                 if ultima_nueva <= ultima_existente:
                     log(f"{nombre}: No hay datos nuevos (última: {ultima_existente})")
                     continue
@@ -138,7 +138,7 @@ def main():
 
             combinado.to_csv(ruta)
 
-            log(f"{nombre}: actualizado correctamente → {len(combinado)} filas")
+            log(f"{nombre}: actualizado correctamente: {len(combinado)} filas")
 
         except Exception as e:
             log(f"ERROR en {nombre}: {e}")

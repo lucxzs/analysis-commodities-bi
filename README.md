@@ -1,4 +1,4 @@
-# 🌾 Commodities Dashboard — Soja, Maíz y Trigo
+# Commodities Dashboard — Soja, Maíz y Trigo
 
 Dashboard de precios de commodities agrícolas con actualización automática diaria y visualización en Power BI.
 
@@ -6,29 +6,15 @@ Dashboard de precios de commodities agrícolas con actualización automática di
 
 ---
 
-## ¿Qué hace este proyecto?
+## Qué hace este proyecto?
 
 Un script de Python extrae precios de mercado de Soja, Maíz y Trigo desde Yahoo Finance todos los días hábiles a las 10:00 AM (Argentina). Los datos se procesan, se calculan KPIs clave y se almacenan como CSV en este repositorio. Power BI lee esos archivos y actualiza el dashboard automáticamente.
 
-## Arquitectura
+## Para quién está dirigido este dashboard?
 
-```
-Yahoo Finance API
-      │
-      ▼
-commodities_etl.py       ← extracción + cálculo de KPIs
-      │
-      ▼
-data/soja.csv
-data/maiz.csv            ← historial acumulado
-data/trigo.csv
-      │
-      ▼
-GitHub Actions           ← cron job diario (lunes a viernes)
-      │
-      ▼
-Power BI Dashboard       ← visualización de precios y KPIs
-```
+Este dashboard está orientado a productores agropecuarios, acopiadores del sector agroindustrial que necesitan monitorear diariamente la evolución de los precios de commodities como soja, maíz y trigo.
+El objetivo es proporcionar una visión clara y resumida del mercado que facilite la toma de decisiones, como definir momentos de venta, evaluar si conviene esperar o anticipar movimientos.
+A diferencia de herramientas más técnicas, este dashboard prioriza indicadores simples que permiten interpretar rápidamente tres dimensiones clave del mercado: nivel de precios, tendencia y volatilidad.
 
 ## KPIs calculados
 
@@ -56,14 +42,14 @@ commodities-dashboard/
 │
 ├── .github/
 │   └── workflows/
-│       └── actualizar_datos.yml   ← pipeline de automatización
+│       └── actualizar_datos.yml   <- pipeline de automatización
 │
 ├── data/
 │   ├── soja.csv
 │   ├── maiz.csv
 │   └── trigo.csv
 │
-├── commodities_etl.py             ← script principal
+├── commodities_etl.py              <- script principal
 ├── requirements.txt
 └── README.md
 ```
